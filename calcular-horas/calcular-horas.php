@@ -53,7 +53,7 @@ if ($horasAdicionar) {
     echo 'Entradas: ' . $horasAdicionarOriginal . ' ' . $valorMultiplicarOriginal . PHP_EOL;
 
     echo '=============================================================' . PHP_EOL;
-    echo 'O total de horas é: ' . $horas . ':' . $minutos;
+    echo 'O total de horas é: ' . str_pad($horas, 2, '0', STR_PAD_LEFT) . ':' . str_pad($minutos, 2, '0', STR_PAD_LEFT);
 
     if ($valorMultiplicar > 0) {
         $totalValor = number_format((($totalMinutos * $valorMultiplicar) / 100), 2, ',', '.');
